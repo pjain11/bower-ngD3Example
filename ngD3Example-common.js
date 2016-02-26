@@ -4,7 +4,7 @@
     angular.module('ngD3Example.widgets', []);
 })();
 
-angular.module("ngD3Example.widgets").run(["$templateCache", function($templateCache) {$templateCache.put("app/widgets/bar-line-chart.html","<div><div class>{{::vm.title}}</div><div class=chart-content-container></div></div>");}]);
+angular.module("ngD3Example.widgets").run(["$templateCache", function($templateCache) {$templateCache.put("app/widgets/bar-line-chart.html","<div><div>{{::vm.title}}</div><div class=chart-content-container flex></div></div>");}]);
 (function () {
     'use strict';
 
@@ -58,7 +58,7 @@ angular.module("ngD3Example.widgets").run(["$templateCache", function($templateC
 
                 var parentDom = chartContainerEl[0],
                     el = d3.select(parentDom),
-                    chartHeight = 300, //parentDom.clientHeight,
+                    chartHeight = parentDom.clientHeight,
                     chartWidth = parentDom.clientWidth,
                     svg = chartUtils.selectOrNew(el, 'svg', 'bar-line-chart');
 

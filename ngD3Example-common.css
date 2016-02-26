@@ -1,3 +1,10 @@
+.full-view {
+  height: 100%;
+  width: 100%; }
+
+.chart {
+  min-height: 300px; }
+
 .axis {
   font: 12px sans-serif; }
   @media only screen and (max-width: 599px) {
