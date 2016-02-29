@@ -153,8 +153,11 @@ angular.module("ngD3Example.widgets").run(["$templateCache", function($templateC
                 }
 
                 selection.on('mouseover', addTooltip)
+                    .on('touchstart', addTooltip)
                     .on('mousemove', positionTooltip)
-                    .on('mouseout', removeTooltip);
+                    .on('touchmove', positionTooltip)
+                    .on('mouseout', removeTooltip)
+                    .on('touchend', removeTooltip);
             }
 
             exports.tooltipFn = function (fnIn) {
